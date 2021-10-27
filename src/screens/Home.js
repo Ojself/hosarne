@@ -12,8 +12,9 @@ const Home = () => {
           className="font-bold text-xl lg:text-4xl"
           style={{
             color: "#548f6f",
-            "text-shadow":
+            textShadow:
               "-1.25px 0 black, 0 1.25px black, 1.25px 0 black, 0 -1.25px black",
+            textDecoration: "underline",
           }}
         >
           Leiligheten
@@ -22,7 +23,7 @@ const Home = () => {
           className="text-sm lg:text-xl"
           style={{
             color: "white",
-            "text-shadow":
+            textShadow:
               "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
           }}
         >
@@ -44,8 +45,8 @@ const Home = () => {
           className="font-bold text-xl lg:text-4xl"
           style={{
             color: "#3EB489",
-            "text-shadow":
-              "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black",
+            textShadow: "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black",
+            textDecoration: "underline",
           }}
         >
           Galleriet
