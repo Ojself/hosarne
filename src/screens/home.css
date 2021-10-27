@@ -1,0 +1,13 @@
+.home-main-banner {
+  background-image: url("../imgs/landingpage0.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 65%;
+  height: 700px; /* You must set a specified height */
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .home-main-banner {
+    background-position: 75%;
+  }
+}
