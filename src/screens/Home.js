@@ -1,22 +1,16 @@
 import "./home.css";
 import React from "react";
-// import Card from "../components/Card";
-import landingImage from "../imgs/door.webp";
 
-const textShadow = {
+/* const textShadow = {
   textShadow:
     "-1.25px 0 black, 0 1.25px black, 1.25px 0 black, 0 -1.25px black",
-};
+}; */
 
 const Home = () => {
   return (
-    <main className='text-white relative'>
-      <img src={landingImage} alt='front door' className='hero ' />
+    <main className='text-white relative hero'>
       <div className='absolute top-16 left-16 lg:left-32'>
-        <h1
-          style={textShadow}
-          className='font-bold text-xl lg:text-4xl underline '
-        >
+        <h1 className='font-bold text-xl lg:text-4xl underline '>
           LEILIGHETEN
         </h1>
         <p className='text-sm lg:text-xl'> Lorem impsum </p>
@@ -31,12 +25,7 @@ const Home = () => {
         </address>
       </div>
       <div className='absolute top-16 right-16 lg:right-32'>
-        <h1
-          style={textShadow}
-          className='font-bold text-xl lg:text-4xl underline'
-        >
-          GALLERIET
-        </h1>
+        <h1 className='font-bold text-xl lg:text-4xl underline'>GALLERIET</h1>
         <p className='text-sm lg:text-xl'> Lorem impsum </p>
       </div>
       <div className='absolute bottom-16 right-8 lg:right-32 text-right'>
