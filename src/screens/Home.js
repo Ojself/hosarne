@@ -6,37 +6,36 @@ import landingImage from "../imgs/door.webp";
 const Home = () => {
   return (
     <main className='text-white h-100 relative '>
-      <img src={landingImage} alt='front door' className="object-cover w-full h-full" />
-      <div className="absolute top-8 left-16">
-        <h1 className="text-4xl font-bold">Leiligheten</h1>
-        <p className="text-xl"> Lorem impsum </p>
-        </div>
-      <div className="absolute bottom-8 left-16"> {/* bottom left */}
-      <address className='text-xl font-bold'>
-        Maria Katarina <br />
-        41259913 <br />
-        <a href="mailto:mariakatarinatm@gmail.com">mariakatarinatm@gmail.com</a>
-      </address>
-
-
-
-
-
+      <img
+        src={landingImage}
+        alt='front door'
+        className='object-cover w-full h-full'
+      />
+      <div className='absolute top-8 left-8 lg:left-16'>
+        <h1 className='font-bold text-xl lg:text-4xl'>Leiligheten</h1>
+        <p className='text-sm lg:text-xl'> Lorem impsum </p>
       </div>
-      <div className="absolute top-8 right-16"> {/* top right */}
-      <h1 className="text-4xl font-bold">Galleriet</h1>
-      <p className="text-xl font-bold">Lorem lorem.</p>
+      <div className='absolute bottom-8 left-8 lg:left-16'>
+        <address className='font-bold text-xs lg:text-xl'>
+          Maria Katarina <br />
+          41259913 <br />
+          <a href='mailto:mariakatarinatm@gmail.com'>
+            mariakatarinatm@gmail.com
+          </a>
+        </address>
       </div>
-      <div className="absolute bottom-8 right-16"> {/* bottom right */}
-      <address className='text-xl font-bold'>
-        Cat <br />
-        46427881 <br />
-        <a href="mailto:cat@goteborggt27b.no">cat@goteborggt27b.no</a>
-      </address>
-        
+      <div className='absolute top-8 right-8 lg:right-16'>
+        <h1 className='font-bold text-xl lg:text-4xl'>Galleriet</h1>
+        <p className='text-sm lg:text-xl'> Lorem impsum </p>
+      </div>
+      <div className='absolute bottom-8 right-8 lg:right-16'>
+        <address className='font-bold text-xs lg:text-xl'>
+          Cat <br />
+          46427881 <br />
+          <a href='mailto:cat@goteborggt27b.no'>cat@goteborggt27b.no</a>
+        </address>
       </div>
     </main>
-
   );
 };
 
