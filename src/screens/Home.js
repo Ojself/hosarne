@@ -5,12 +5,8 @@ import landingImage from "../imgs/door.webp";
 
 const Home = () => {
   return (
-    <main className='text-white h-100 relative '>
-      <img
-        src={landingImage}
-        alt='front door'
-        className='object-cover w-full h-full'
-      />
+    <main className='text-white relative '>
+      <img src={landingImage} alt='front door' className='hero ' />
       <div className='absolute top-8 left-8 lg:left-16'>
         <h1 className='font-bold text-xl lg:text-4xl'>Leiligheten</h1>
         <p className='text-sm lg:text-xl'> Lorem impsum </p>

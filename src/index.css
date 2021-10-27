@@ -4,18 +4,14 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Avenir';
-    src: local('Avenir'), url(./fonts/AvenirLTStd-Black.otf) format('truetype');
-  }
+  font-family: "Avenir";
+  src: local("Avenir"), url(./fonts/AvenirLTStd-Black.otf) format("truetype");
+}
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Avenir, sans-serif;
-    background-color: black;
-  }
-
-main{
-    min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, sans-serif;
+  background-color: black;
 }
