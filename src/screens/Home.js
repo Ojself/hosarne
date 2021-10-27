@@ -1,12 +1,10 @@
 import "./home.css";
-import "../index.css";
 import React from "react";
 // import Card from "../components/Card";
 import landingImage from "../imgs/door.webp";
 
 const Home = () => {
   return (
-<<<<<<< HEAD
     <main className="text-white h-100 relative ">
       <img
         src={landingImage}
@@ -24,14 +22,17 @@ const Home = () => {
         >
           Leiligheten
         </h1>
-        <p className="text-sm lg:text-xl"> Lorem impsum </p>
-=======
-    <main className='text-white relative '>
-      <img src={landingImage} alt='front door' className='hero ' />
-      <div className='absolute top-8 left-8 lg:left-16'>
-        <h1 className='font-bold text-xl lg:text-4xl'>Leiligheten</h1>
-        <p className='text-sm lg:text-xl'> Lorem impsum </p>
->>>>>>> 82a1b20f13d3522c2497da6b92066f1809d9f4b0
+        <p
+          className="text-sm lg:text-xl"
+          style={{
+            color: "white",
+            "text-shadow":
+              "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+          }}
+        >
+          {" "}
+          Lorem impsum{" "}
+        </p>
       </div>
       <div className="absolute bottom-8 left-8 lg:left-16">
         <address className="font-bold text-xs lg:text-xl">
