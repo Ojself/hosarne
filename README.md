@@ -1,6 +1,11 @@
 # HOSARNE
 
-- domain fix
-- font: https://www.dafont.com/monita-signature.font
-- Skrift overlapper på iphone
-- Logoen "Hos Arne"
+[Hos Arne](https://hosarne.no)
+
+### Screenshot
+
+<img alt="screenshot" src="./src/imgs/screenshot.png" />
+
+### Lighthouse Report
+
+<img alt="lighthouse report" src="./src/imgs/lighthouse.png" />
