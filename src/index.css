@@ -5,10 +5,12 @@
 
 @font-face {
   font-family: "Avenir";
+  font-display: swap;
   src: local("Avenir"), url(./fonts/AvenirLTStd-Black.otf) format("truetype");
 }
 @font-face {
   font-family: "MonitaSignature";
+  font-display: swap;
   src: local("MonitaSignature"),
     url(./fonts/MonitaSignature-Regular.otf) format("truetype");
 }
