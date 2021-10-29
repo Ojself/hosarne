@@ -7,15 +7,28 @@
   font-family: "Avenir";
   src: local("Avenir"), url(./fonts/AvenirLTStd-Black.otf) format("truetype");
 }
+@font-face {
+  font-family: "MonitaSignature";
+  src: local("MonitaSignature"),
+    url(./fonts/MonitaSignature-Regular.otf) format("truetype");
+}
 
-.unusedATM {
+html,
+body  {
+  background-color: black;
+}
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Avenir, sans-serif;
-  background-color: black;
 }
 
 main {
   min-height: 100vh;
+}
+
+.swhong-font {
+  font-family: MonitaSignature, sans-serif;
 }

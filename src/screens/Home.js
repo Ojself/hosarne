@@ -1,48 +1,50 @@
 import "./home.css";
 import React from "react";
-
-/* const textShadow = {
-  textShadow:
-    "-1.25px 0 black, 0 1.25px black, 1.25px 0 black, 0 -1.25px black",
-}; */
+import BigHeader from "../components/BigHeader";
+import ContactInformation from "../components/ContactInformation";
+import teamMembers from "../utils/teamMembers.json";
 
 const Home = () => {
   return (
-    <main className='text-white relative hero'>
-      <div className='absolute top-16 left-16 lg:left-32'>
-        <h1 className='font-bold text-xl lg:text-4xl underline '>
-          LEILIGHETEN
-        </h1>
-        <p className='text-sm lg:text-xl'> Lorem impsum </p>
-      </div>
-      <div className='absolute bottom-16 left-8 lg:left-32'>
-        <address className='font-bold text-xs lg:text-xl'>
-          Maria Katarina <br />
-          41259913 <br />
-          <a href='mailto:mariakatarinatm@gmail.com'>
-            mariakatarinatm@gmail.com
-          </a>
-        </address>
-      </div>
-      <div className='absolute top-16 right-16 lg:right-32'>
-        <h1 className='font-bold text-xl lg:text-4xl underline'>GALLERIET</h1>
-        <p className='text-sm lg:text-xl'> Lorem impsum </p>
-      </div>
-      <div className='absolute bottom-16 right-8 lg:right-32 text-right'>
-        <address className='font-bold text-xs lg:text-xl'>
-          Cat <br />
-          46427881 <br />
-          <a href='mailto:cat@goteborggt27b.no'>cat@goteborggt27b.no</a>
-        </address>
+    <main className='text-white flex justify-center items-center hero '>
+      <div style={{}} className='w-11/12 h-full  flex justify-around flex-col '>
+        <div className='flex  justify-between'>
+          <div className=''>
+            <h1 className='swhong-font text-6xl '>Hos Arne</h1>
+          </div>
+          <address className='text-right'>
+            GÖTEBORGGT. 27B
+            <br />
+            0566, OSLO
+            <br />
+            - <br />
+            @GOTEBORGGT27B
+          </address>
+        </div>
+        <div className='flex justify-between'>
+          <BigHeader
+            title='LEILIGHETEN'
+            subTitle='The Apartment'
+            alignedLeft={true}
+          />
+          <BigHeader
+            title='GALLERIET'
+            subTitle='The Gallery'
+            alignedLeft={false}
+          />
+        </div>
+        <div className='flex justify-between'>
+          {teamMembers.map((member, i) => {
+            return (
+              <div key={member.name} className={``}>
+                <ContactInformation {...member} />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </main>
   );
 };
-
-/* <p className="text-xl font-bold">Åndelig veileder,  Alex Lyngaas</p>
-        <p className="text-xl font-bold">Daglig leder Maria Katarina T. Michelsen</p>
-        <p className="text-xl font-bold">Kurator, Catharina Werring Otnes</p>
-        <p className="text-xl font-bold">Investor Jan Erik Rivelsrud</p>
-         */
 
 export default Home;

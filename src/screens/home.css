@@ -2,12 +2,11 @@
   background-image: url("../imgs/door.webp");
   background: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0) 50%,
-      rgba(0, 0, 0, 0.65) 100%
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 50%,
+      rgba(0, 0, 0, 0.15) 100%
     ),
     url("../imgs/door.webp") no-repeat;
-
   background-size: cover;
   background-position: 0% 80%;
   width: 100vw;
