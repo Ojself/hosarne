@@ -3,7 +3,8 @@ import React from "react";
 
 const Home = () => {
   return (
-    <main className='text-white bg-black flex justify-center items-center hero '></main>
+    <main className='text-white bg-black flex justify-center items-center hero '>
+    </main>
   );
 };
 

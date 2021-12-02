@@ -2,7 +2,7 @@
   "name": "hosarne",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ojself.github.io/hosarne",
+  "homepage": "https://ojself.github.io/hosarne",
   "dependencies": {
     "@babel/core": "^7.14.8",
     "@craco/craco": "^6.2.0",
@@ -31,9 +31,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -54,7 +52,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
     "tailwindcss-debug-screens": "^2.0.0"
   }
 }
