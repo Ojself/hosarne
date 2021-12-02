@@ -28,6 +28,7 @@ const NavBar = () => {
     }
     setLoading(false);
   };
+  console.log(loading);
   return (
     <header
       id='navbar'

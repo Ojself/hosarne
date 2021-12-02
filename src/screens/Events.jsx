@@ -33,7 +33,7 @@ const Program = () => {
       setEvents(data.filter((event) => new Date(event.timeStart) >= yesterday));
     };
     fetchSanityData();
-  }, [theme]);
+  }, [theme, events.length, somethingIsHovering]);
   const handleEventHover = (bool, theme = "") => {
     setSomethingIsHovering(bool);
     setTheme(theme);
