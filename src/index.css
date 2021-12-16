@@ -57,9 +57,15 @@ img {
 
 #hos_arne-fixed {
   position: fixed;
-  top: 10%;
-  right: 3%;
+  top: 2%;
+  right: 1%;
   z-index: 105;
   transform: rotate(270deg);
   transform-origin: right bottom;
+  background-image: url("./imgs/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width:400px;
+  height:250px;
 }

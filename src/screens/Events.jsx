@@ -6,10 +6,10 @@ import { changeLayOutColors } from "../utils/helpers";
 const Program = () => {
   const [events, setEvents] = useState([]);
   const [somethingIsHovering, setSomethingIsHovering] = useState(false);
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState("#fff");
 
   useEffect(() => {
-    changeLayOutColors(theme, somethingIsHovering, "#events-home");
+    changeLayOutColors(theme, false);
     const fetchSanityData = async () => {
       if (events.length) return;
       const data =
@@ -17,9 +17,11 @@ const Program = () => {
                        title,
                        timeStart,
                        timeEnd,
-                       facebookUrl,
                        "theme": theme->hex,
                        mainEvent,
+                       facebookUrl,
+                       body,
+                       slug,
                        mainImage{
                            asset->{
                                _id,
@@ -39,17 +41,14 @@ const Program = () => {
     setTheme(theme);
   };
   return (
-    <main
-      id='events-home'
-      className='text-white h-screen transition duration-1000 ease-in-out'
-    >
-      <section className='h-3/5 flex flex-wrap'>
+    <main id='events-home' className='text-white h-min-screen'>
+      <section className='h-auto flex flex-wrap mt-20 mb-32'>
         {events.map((event) => (
           <EventPreview
             key={event.title}
             handleEventHover={handleEventHover}
             somethingIsHovering={somethingIsHovering}
-            {...event}
+            event={event}
           />
         ))}
       </section>

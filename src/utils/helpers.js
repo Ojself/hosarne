@@ -1,38 +1,63 @@
-export const formatDate = (input) => {
-  const datePart = input.match(/\d+/g);
+const formatDate = (date) => {
+  const datePart = date.match(/\d+/g);
   const year = datePart[0].substring(2);
   const month = datePart[1];
   const day = datePart[2];
 
   return day + "." + month + "." + year;
+}
+
+export const formatDates = (d1, d2) => {
+  const date1 = formatDate(d1)
+  if (!d2){
+    return date1
+  }
+  const date2 = formatDate(d2)
+  if (date1.slice(-2) === date2.slice(-2)){
+    const from = date1.substring(0,5)
+    const to = date2
+    return `${from} - ${to}`
+  }
+  return `${date1} - ${date2}`
 };
 
-export const changeLayOutColors = (theme, remove, elementId) => {
+export const changeLayOutColors = (theme, noTransition) => {
   const navbar = document.querySelector("#navbar");
   const footer = document.querySelector("#footer");
-  const customElement = document.querySelector(elementId);
-  const openingHours = document.querySelector("#opening-hours");
   const adress = document.querySelector("#adress");
-  const emailInput = document.querySelector("#email-input");
+  const body = document.body
   const allElements = [
     navbar,
     footer,
-    openingHours,
     adress,
-    customElement,
-    emailInput,
+    body
   ];
   if (allElements.some((el) => el === null)) return;
 
-  emailInput.style.backgroundColor = theme;
-  customElement.style.backgroundColor = theme;
+  const transitionStyles = ["transition", "duration-1000", "ease-in-out"]
+  if (noTransition){
+    allElements.forEach((el) => {
+      transitionStyles.forEach(t=> {
+        el.classList.remove(t)
+      })
+    })
+  } else {
+    allElements.forEach((el) => {
+      transitionStyles.forEach(t=> {
+        el.classList.add(t)
+      })
+    })
+  }
+
   navbar.style.backgroundColor = theme;
   footer.style.backgroundColor = theme;
-  if (remove) {
-    openingHours.classList.add("opacity-0");
+  body.style.backgroundColor = theme;
+  
+  
+  
+  /* if (remove) {
     adress.classList.add("opacity-0");
   } else {
-    openingHours.classList.remove("opacity-0");
     adress.classList.remove("opacity-0");
-  }
+  } */
 };

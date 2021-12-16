@@ -1,21 +1,12 @@
 import React, { useState } from "react";
-import { formatDate } from "../utils/helpers";
+import { formatDates } from "../utils/helpers";
+import { Link } from "react-router-dom";
 
-const EventPreview = ({
-  mainImage,
-  title,
-  theme,
-  mainEvent,
-  facebookUrl,
-  timeEnd,
-  timeStart,
-  handleEventHover,
-  somethingIsHovering,
-}) => {
+const EventPreview = ({ somethingIsHovering, handleEventHover, event }) => {
+  const { mainImage, title, theme, mainEvent, timeEnd, timeStart, slug } =
+    event;
   const [hovering, setHovering] = useState(false);
-  const date = `${formatDate(timeStart)} ${
-    timeEnd ? `- ${formatDate(timeEnd)}` : ""
-  }`;
+
   const handleHovering = (bool, theme) => {
     handleEventHover(bool, theme);
     setHovering(bool);
@@ -28,16 +19,17 @@ const EventPreview = ({
     <article
       onMouseEnter={() => handleHovering(true, theme)}
       onMouseLeave={() => handleHovering(false)}
-      className={`transition duration-1000 ease-in-out ${opacity} ${width} mx-4 mb-24 text-black `}
+      className={`transition duration-1000 ease-in-out ${opacity} ${width} mx-6 mb-24 text-black `}
     >
-      <a
+      <Link
         className='flex flex-col font-book'
-        target='_blank'
-        rel='noopener noreferrer'
-        href={facebookUrl}
+        to={{
+          pathname: `/program/${slug.current}`,
+          state: { event },
+        }}
       >
         <h1 className='text-3xl'>{title}</h1>
-        <h5>{date}</h5>
+        <h5>{formatDates(timeStart, timeEnd)}</h5>
         <div className=''>
           <img
             className='object-cover'
@@ -45,7 +37,7 @@ const EventPreview = ({
             alt={mainImage.alt}
           />
         </div>
-      </a>
+      </Link>
     </article>
   );
 };

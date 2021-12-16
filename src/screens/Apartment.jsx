@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { changeLayOutColors } from "../utils/helpers";
 
 const Apartment = () => {
+  useEffect(() => {
+    changeLayOutColors("#fff");
+  }, []);
   return (
-    <main className='transition duration-1000 ease-in-out'>
+    <main className=''>
       <section className='flex justify-center'>
         <div className='w-5/12'>
           <img alt='Galleriet front' src='https://picsum.photos/600/600' />

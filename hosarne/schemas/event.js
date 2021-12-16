@@ -23,6 +23,12 @@ const event = {
       type: "datetime",
     },
     {
+      name: "theme",
+      title: "Farge",
+      type: "reference",
+      to: { type: "theme" },
+    },
+    {
       name: "mainEvent",
       title: "Viktig Event",
       type: "boolean",
@@ -32,8 +38,25 @@ const event = {
       name: "facebookUrl",
       title: "FacebookeventURL",
       type: "url",
-      validation: (Rule) => [Rule.required()],
       description: "eg 'https://fb.me/e/2Ipa9x16x'",
+    },
+    {
+      name: "body",
+      title: "Body",
+      type: "blockContent",
+    },
+    
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      description:
+      "Slug er hva URL'en ender med på nettsiden. eg: hosarne.no/program/breathwork-a-rebirthing-journey",
+      options: {
+        source: "title",
+        maxLength: 96,
+      },
+      validation: (Rule) => [Rule.required()],
     },
     {
       name: "mainImage",
@@ -42,39 +65,15 @@ const event = {
       options: {
         hotspot: true,
       },
-      /* fields: [
+      fields: [
         {
           name: "caption",
           type: "string",
           title: "Caption",
           options: { isHighlighted: true },
         },
-      ], */
+      ],
       validation: (Rule) => [Rule.required()],
-    },
-    /* {
-      name: "body",
-      title: "Body",
-      type: "blockContent",
-    }, */
-
-    /* {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      description:
-        "Slug er hva URL'en ender med på nettsiden. eg: hosarne.no/program/breathwork-a-rebirthing-journey",
-      options: {
-        source: "title",
-        maxLength: 96,
-      },
-      validation: (Rule) => [Rule.required()],
-    }, */
-    {
-      name: "theme",
-      title: "Farge",
-      type: "reference",
-      to: { type: "theme" },
     },
   ],
 };

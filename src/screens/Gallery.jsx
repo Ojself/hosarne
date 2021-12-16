@@ -1,6 +1,9 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import { changeLayOutColors } from "../utils/helpers";
 const Gallery = () => {
+  useEffect(() => {
+    changeLayOutColors("#fff");
+  }, []);
   return (
     <main>
       <section className='flex justify-center'>
