@@ -3,13 +3,13 @@ import { NavLink, useLocation } from "react-router-dom";
 import { handleMailChimp } from "../utils/mailchimp";
 import { HiPlus } from "react-icons/hi";
 
-const NavBar = (props) => {
+const NavBar = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
   const [showExtraMenuButton, setShowExtraMenuButton] = useState(false);
   const [error, setError] = useState(false);
-
+  console.log(loading, "mail loading");
   const location = useLocation();
   useEffect(() => {
     const userIsAtSingleEvent = location.pathname.includes("/program/");

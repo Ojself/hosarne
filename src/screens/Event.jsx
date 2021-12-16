@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { changeLayOutColors, formatDates } from "../utils/helpers";
 import BlockContent from "@sanity/block-content-to-react";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import { AiOutlineArrowDown, AiOutlineConsoleSql } from "react-icons/ai";
+import { AiOutlineArrowDown } from "react-icons/ai";
 const Event = ({ location }) => {
   const [scrollOpacity, setScrollOpacity] = useState(1);
 
