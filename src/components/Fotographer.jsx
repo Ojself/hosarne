@@ -1,7 +1,7 @@
 import React from "react";
 const BlockContent = require("@sanity/block-content-to-react");
 
-const TeamMember = ({ name, title, email, mobile, body, image }) => {
+const Photographer = ({ name, title, email, mobile, body, image }) => {
   return (
     <div className='flex lg:flex-row flex-col justify-around font-roman my-6'>
       <div className='w-full lg:w-1/3'>
@@ -22,4 +22,4 @@ const TeamMember = ({ name, title, email, mobile, body, image }) => {
   );
 };
 
-export default TeamMember;
+export default Photographer;

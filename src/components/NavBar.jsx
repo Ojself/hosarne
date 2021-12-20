@@ -40,16 +40,16 @@ const NavBar = () => {
 
   const rotatedStyle = isOpen ? "transform rotate-45" : "";
   const menuButton = (
-    <div className='top-10 left-6 absolute z-10'>
+    <div className='top-4 left-6 absolute z-10'>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className='outline-none pointer-events-auto'
       >
-        <div className='flex items-center text-2xl'>
+        <div className='flex items-center text-base lg:text-2xl'>
           <HiPlus
             className={`transition duration-250 ease-in-out ${rotatedStyle}`}
           />
-          <span className=' ml-3 '>Meny</span>
+          <span className='ml-3 '>Meny</span>
         </div>
       </button>
     </div>
@@ -61,7 +61,7 @@ const NavBar = () => {
       <nav
         className={`${navOpacity} transition duration-500 ease-in-out w-full flex flex-row justify-around pt-12`}
       >
-        <div className='flex flex-col uppercase text-xl font-roman'>
+        <div className='flex flex-col uppercase text-sm lg:text-xl font-roman '>
           <NavLink className='mb-4 ' to='/'>
             Hos Arne
           </NavLink>
@@ -96,10 +96,10 @@ const NavBar = () => {
             Team
           </NavLink>
         </div>
-
-        <div id='opening-hours' className='flex flex-col font-book'></div>
-        <div id='adress' className='flex flex-col font-book'>
-          <h1>Addresse:</h1>
+        <div>{/* Empty by design */}</div>
+        <div>{/* Empty by design */}</div>
+        <div id='adress' className='flex flex-col font-book text-sm lg:text-lg'>
+          <h1>Adresse:</h1>
           <address className='not-italic mb-4'>
             Gøteborggata 27B
             <br />
@@ -110,14 +110,14 @@ const NavBar = () => {
             </div>
           </address>
 
-          <form onSubmit={handleSubmit}>
+          <form style={{ zIndex: 250 }} onSubmit={handleSubmit}>
             <label>
               Nyhetsbrev: <br /> (Mail)
               <input
                 type='text'
                 style={{ backgroundColor: "transparent" }}
                 id='email-input'
-                className='ml-2 focus:border-green-500 outline-none border-black border-t-0 border-l-0 border-r-0 border-2 '
+                className='ml-2 focus:border-green-500 outline-none border-black border-t-0 border-l-0 border-r-0 border-2 z-100'
                 value={email}
                 onChange={handleChange}
               />
@@ -126,9 +126,8 @@ const NavBar = () => {
             <br />
           </form>
         </div>
-        <div>{/* empty by design lol */}</div>
       </nav>
-      <div id='hos_arne-fixed' className='font-swhong text-6xl'>
+      <div id='hos_arne-fixed' className='font-swhong text-6xl w-56 lg:w-96'>
         {/* right sided logo here */}
       </div>
     </header>

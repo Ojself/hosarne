@@ -32,7 +32,7 @@ const Team = () => {
 
   return (
     <main className='flex flex-col items-center'>
-      <div className='mt-6 flex w-8/12 flex-col'>
+      <div className='mt-6 flex w-full px-2 lg:px-0 lg:w-2/3 flex-col'>
         {teamMember.map((human) => (
           <TeamMember key={human.name} {...human} />
         ))}

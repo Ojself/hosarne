@@ -7,11 +7,11 @@ const Apartment = () => {
   }, []);
   return (
     <main className=''>
-      <section className='flex justify-center'>
-        <div className='w-5/12'>
+      <section className='flex flex-col lg:flex-row items-center justify-center'>
+        <div className='w-4/5 lg:w-5/12'>
           <img alt='Galleriet front' src='https://picsum.photos/600/600' />
         </div>
-        <div className='w-5/12 flex flex-col justify-center'>
+        <div className='w-4/5 lg:w-5/12 flex flex-col justify-center'>
           <p className='mb-6'>
             Hos Arne er alle velkommen Hos Arne er det en hage Folk Hos Arne har
             glød Hos Arne er det et galleri Folk Hos Arne bry seg om krig og

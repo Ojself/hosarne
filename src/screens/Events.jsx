@@ -42,7 +42,7 @@ const Program = () => {
   };
   return (
     <main id='events-home' className='text-white h-min-screen'>
-      <section className='h-auto flex flex-wrap mt-20 mb-32'>
+      <section className='h-auto flex flex-wrap mt-12 lg:mt-20 lg:mb-32'>
         {events.map((event) => (
           <EventPreview
             key={event.title}

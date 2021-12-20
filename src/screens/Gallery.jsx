@@ -7,10 +7,10 @@ const Gallery = () => {
   return (
     <main>
       <section className='flex justify-center'>
-        <div className='w-5/12'>
+        <div className='w-4/5 lg:w-5/12'>
           <img alt='Galleriet front' src='https://picsum.photos/600/600' />
         </div>
-        <div className='w-5/12 flex flex-col justify-center'>
+        <div className='w-4/5 lg:w-5/12 flex flex-col justify-center'>
           <p className='mb-6'>
             Galleriet Hos Arne er et unikt space som ligger åpent eksponert fra
             Leiligheten/Stuen, og vice versa. Galleriet har som et anti-konsept

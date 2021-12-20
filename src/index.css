@@ -33,6 +33,7 @@
 
 main {
   min-height: 60vh;
+  margin-bottom: 20vh;
 }
 
 img {
@@ -57,8 +58,8 @@ img {
 
 #hos_arne-fixed {
   position: fixed;
-  top: 2%;
-  right: 1%;
+  top: -20%;
+  right: 2px;
   z-index: 105;
   transform: rotate(270deg);
   transform-origin: right bottom;
@@ -66,6 +67,5 @@ img {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-  width:400px;
   height:250px;
 }

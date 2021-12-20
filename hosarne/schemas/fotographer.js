@@ -1,12 +1,13 @@
-const human = {
-  name: "human",
-  title: "Menneske",
+const fotographer = {
+  name: "fotographer",
+  title: "In-House medlem",
   type: "document",
   fields: [
     {
       name: "name",
       title: "Navn",
       type: "string",
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "title",
@@ -42,6 +43,18 @@ const human = {
       type: "number",
       hidden: true,
     },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      description:
+      "Slug er hva URL'en ender med på nettsiden. eg: hosarne.no/in-house/erling",
+      options: {
+        source: "title",
+        maxLength: 72,
+      },
+      validation: (Rule) => [Rule.required()],
+    },
   ],
   preview: {
     select: {
@@ -50,5 +63,5 @@ const human = {
     },
   },
 };
-export default human;
+export default fotographer;
 

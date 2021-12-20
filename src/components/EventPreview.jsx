@@ -13,7 +13,7 @@ const EventPreview = ({ somethingIsHovering, handleEventHover, event }) => {
   };
   const opacity =
     !hovering && somethingIsHovering ? "opacity-10" : "opacity-100";
-  const width = mainEvent ? "w-2/5" : "w-1/4";
+  const width = mainEvent ? "w-full lg:w-2/5" : "w-full lg:w-1/4";
 
   return (
     <article
@@ -28,8 +28,10 @@ const EventPreview = ({ somethingIsHovering, handleEventHover, event }) => {
           state: { event },
         }}
       >
-        <h1 className='text-3xl'>{title}</h1>
-        <h5>{formatDates(timeStart, timeEnd)}</h5>
+        <h1 className='text-xl lg:text-3xl'>{title}</h1>
+        <h5 className='text-xs lg:text-base'>
+          {formatDates(timeStart, timeEnd)}
+        </h5>
         <div className=''>
           <img
             className='object-cover'

@@ -42,16 +42,16 @@ const Event = ({ location }) => {
       <main
         style={{ backgroundColor }}
         id='event-home'
-        className='transition duration-1000 ease-in-out px-44 relative mb-64'
+        className='transition duration-1000 ease-in-out px-2 lg:px-44 relative mb-64'
       >
         <section
           style={{ opacity: scrollOpacity }}
-          className='h-96 sticky top-64'
+          className='h-44 lg:h-96 sticky top-64'
         >
-          <h5 className='text-3xl text-center font-thin'>
+          <h5 className='text-lg lg:text-3xl text-center font-thin'>
             {formatDates(event.timeStart, event.timeEnd)}{" "}
           </h5>
-          <h1 className='text-8xl text-center font-extralight'>
+          <h1 className='text-3xl lg:text-6xl text-center font-extralight'>
             {event.title}
           </h1>
         </section>
