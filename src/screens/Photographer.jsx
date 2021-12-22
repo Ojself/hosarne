@@ -48,7 +48,7 @@ const Photographer = ({}) => {
       setPhotographer(data);
     };
     fetchSanityData();
-  }, []);
+  }, [slug]);
   if (!photographer.length) {
     return <div>Loading...</div>;
   }
