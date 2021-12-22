@@ -49,14 +49,14 @@ const Event = ({ location }) => {
           className='h-44 lg:h-96 sticky top-64'
         >
           <h5 className='text-lg lg:text-3xl text-center font-thin'>
-            {formatDates(event.timeStart, event.timeEnd)}{" "}
+            {formatDates(event.timeStart, event.timeEnd)}
           </h5>
           <h1 className='text-3xl lg:text-6xl text-center font-extralight'>
             {event.title}
           </h1>
         </section>
         <img
-          className='object-cover w-full h-auto'
+          className='object-cover w-full h-auto mb-12'
           src={event.mainImage.asset.url}
           alt={event.mainImage.alt}
         />

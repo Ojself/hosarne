@@ -25,6 +25,18 @@
     url(./fonts/MonitaSignature-Regular.otf) format("truetype");
 }
 
+@font-face {
+  font-family: "Photographer";
+  font-display: swap;
+  src: local("Photographer"), url(./fonts/photographer-regular.woff2) format("truetype");
+}
+
+@font-face {
+  font-family: "PhotographerFX";
+  font-display: swap;
+  src: local("PhotographerFX"), url(./fonts/photographer-regularFX.woff2) format("truetype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -54,6 +66,14 @@ img {
 }
 .font-roman {
   font-family: Avenir-Roman, sans-serif;
+}
+
+.font-photographer{
+  font-family: Photographer, sans-serif;
+
+}
+.font-photographer-fx{
+  font-family: PhotographerFX, sans-serif;
 }
 
 #hos_arne-fixed {

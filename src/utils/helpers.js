@@ -53,11 +53,4 @@ export const changeLayOutColors = (theme, noTransition) => {
   footer.style.backgroundColor = theme;
   body.style.backgroundColor = theme;
   
-  
-  
-  /* if (remove) {
-    adress.classList.add("opacity-0");
-  } else {
-    adress.classList.remove("opacity-0");
-  } */
 };

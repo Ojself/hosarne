@@ -7,6 +7,7 @@ const human = {
       name: "name",
       title: "Navn",
       type: "string",
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "title",

@@ -22,10 +22,10 @@ const Footer = () => {
     </>
   );
   const adress = (
-    <adress className='not-italic'>
+    <address className='not-italic'>
       Gøteborggata 27B <br />
       0655 Oslo
-    </adress>
+    </address>
   );
   return (
     <footer

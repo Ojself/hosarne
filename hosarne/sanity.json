@@ -13,7 +13,8 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "color-picker",
-    "order-documents"
+    "order-documents",
+    "@sanity/vision"
   ],
   "env": {
     "development": {
