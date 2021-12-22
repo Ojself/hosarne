@@ -10,7 +10,7 @@ import { changeLayOutColors } from "../utils/helpers";
 /* difference between no photographer and loading */
 /* ? */
 
-const Photographer = ({}) => {
+const Photographer = () => {
   const [photographer, setPhotographer] = useState([]);
   const location = useLocation();
   const slug = location.pathname.split("/")[2];
