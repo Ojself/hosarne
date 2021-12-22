@@ -33,7 +33,11 @@ const InHouse = () => {
   }, []);
 
   if (!photographers.length) {
-    return <div>Loading...</div>;
+    return (
+      <main>
+        <div>Loading...</div>
+      </main>
+    );
   }
 
   return (
