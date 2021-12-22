@@ -5,11 +5,7 @@ import colorPalette from "../utils/photographerPalette";
 
 import { changeLayOutColors } from "../utils/helpers";
 const InHouse = () => {
-  const [photographers, setPhotographers] = useState([
-    { name: "anthony", title: "Fotograf", slug: { current: "anthony" } },
-    { name: "Yen", title: "Biolog", slug: { current: "yen" } },
-    { name: "Thor", title: "Utvikler", slug: { current: "thor" } },
-  ]);
+  const [photographers, setPhotographers] = useState([]);
 
   const randomStart = Math.floor(Math.random() * colorPalette.length);
 
@@ -21,9 +17,7 @@ const InHouse = () => {
         await sanityClient.fetch(`*[_type == "photographer"] | order(order asc){
                        name,
                        title,
-                       email,
-                       mobile,
-                       body,
+                       slug,
                        image{
                            asset->{
                                _id,
@@ -35,8 +29,12 @@ const InHouse = () => {
                    }`);
       setPhotographers(data);
     };
-    //fetchSanityData();
+    fetchSanityData();
   }, []);
+
+  if (!photographers.length) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <main className='flex flex-col items-center'>

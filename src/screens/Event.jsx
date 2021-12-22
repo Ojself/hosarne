@@ -42,7 +42,7 @@ const Event = ({ location }) => {
       <main
         style={{ backgroundColor }}
         id='event-home'
-        className='transition duration-1000 ease-in-out px-2 lg:px-44 relative mb-64'
+        className='transition duration-1000 ease-in-out px-2 lg:px-44 relative mb-64 '
       >
         <section
           style={{ opacity: scrollOpacity }}

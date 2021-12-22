@@ -3,12 +3,18 @@ import { useLocation } from "react-router-dom";
 import BlockContent from "@sanity/block-content-to-react";
 import sanityClient from "../client";
 import { changeLayOutColors } from "../utils/helpers";
+/* TODO */
+/* TODO */
+/* TODO */
+
+/* difference between no photographer and loading */
+/* ? */
 
 const Photographer = ({}) => {
   const [photographer, setPhotographer] = useState([]);
   const location = useLocation();
   const slug = location.pathname.split("/")[2];
-  console.log(photographer);
+
   useEffect(() => {
     changeLayOutColors("#fff");
 
